@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Repository</title>
+	<link rel="stylesheet" href="css/custom.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+	<div class="acc_block">
+		<div class="acc_panel">
+			<div class="acc_head">
+				<span class="arrow_up_down">&#10095;</span>
+				<h4>Lorem ipsum</h4>
+			</div>
+			<div class="acc_body">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, ipsum, fuga, in, obcaecati magni ullam nobis voluptas fugiat tenetur voluptatum quas tempora maxime rerum neque deserunt suscipit provident cumque et mollitia ex aspernatur porro minus sapiente voluptatibus eos at perferendis repellat odit aliquid harum molestias ratione pariatur adipisci. Aliquid, iure.</p>
+			</div>
+		</div>
+		<div class="acc_panel">
+			<div class="acc_head">
+				<span class="arrow_up_down">&#10095;</span>
+				<h4>Repellat Odit Aliquid</h4>
+			</div>
+			<div class="acc_body">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, ipsum, fuga, in, obcaecati magni ullam nobis voluptas fugiat tenetur voluptatum quas tempora maxime rerum neque deserunt suscipit provident cumque et mollitia ex aspernatur porro minus sapiente voluptatibus eos at perferendis repellat odit aliquid harum molestias ratione pariatur adipisci. Aliquid, iure.</p>
+			</div>
+		</div>
+		<div class="acc_panel">
+			<div class="acc_head">
+				<span class="arrow_up_down">&#10095;</span>
+				<h4>Dolor sit Amet</h4>
+			</div>
+			<div class="acc_body">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, ipsum, fuga, in, obcaecati magni ullam nobis voluptas fugiat tenetur voluptatum quas tempora maxime rerum neque deserunt suscipit provident cumque et mollitia ex aspernatur porro minus sapiente voluptatibus eos at perferendis repellat odit aliquid harum molestias ratione pariatur adipisci. Aliquid, iure.</p>
+			</div>
+		</div>
+	</div>
+
+	<script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type='text/javascript'>
+		$(document).ready(function(){
+			$(".acc_body:first").show();
+			$(".arrow_up_down:first").addClass('arrow_down');
+			$(".acc_head").click(function(){
+				if($(this).is(":visible"))
+				{
+					$(".acc_body").slideUp(300);
+					$(".arrow_up_down").html('&#10095;').removeClass('arrow_down');
+				}
+				if($(this).next(".acc_body").is(":visible"))
+				{
+					$(this).next(".acc_body").slideUp(300);
+					$(this).children(".arrow_up_down").html('&#10095;').removeClass('arrow_down');
+				}
+				else
+				{
+					$(this).next(".acc_body").slideDown(300);
+					$(this).children(".arrow_up_down").addClass('arrow_down');	
+				}
+			});
+		});
+	</script>
+</body>
+</html>
