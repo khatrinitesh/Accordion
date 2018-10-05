@@ -1,0 +1,129 @@
+*{
+	margin:0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #dce7eb;
+	font-size: 14px;
+	font-family: 'Titillium Web', sans-serif;
+	color:#ff6873;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*********** STYLING ***********/
+.acc_block{
+	max-width: 506px;
+	margin: 88px auto 0;
+	border-top:10px solid #ff6873;
+	background-color: #fefffa;
+	padding: 40px 30px;
+}
+
+.acc_block h2{
+	font-size: 36px;
+	font-family: 'Titillium Web', sans-serif;
+	line-height: 42px;
+	letter-spacing: 3px;
+	font-weight: lighter;
+	margin: 0 0 30px;
+}
+
+.acc_panel{
+	border-top:2px dotted #dce7eb;
+	padding:20px 0;
+}
+
+.acc_panel .acc_head{
+	cursor: pointer;
+	position: relative;
+}
+
+.acc_panel .acc_head h3{
+	font-size: 26px;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.acc_panel .acc_head h3::after{
+	position: absolute;
+	top:50%;
+	right: 0;
+	content:"";
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	width: 12px;
+	height: 9px;
+	display: inline-block;
+}
+
+.acc_panel .acc_head h3.arrow_down::after{
+	background: url('../img/arrow_down.png');
+}
+
+.acc_panel .acc_head h3.arrow_up::after{
+	background: url('../img/arrow_up.png');
+}
+
+.acc_panel .acc_body{
+	display: none;
+	padding: 20px 0 0;
+}
+
+.acc_panel .acc_body p{
+	color:rgba(48, 69, 92, 0.8);
+	font-size: 17px;
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: lighter;
+	letter-spacing: 1px;
+}
+
